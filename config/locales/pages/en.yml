@@ -1,0 +1,5 @@
+en:
+  pages:
+    title: "Welcome Home, %{user}"
+    sign_in: Sign in
+    sign_out: Sign out
