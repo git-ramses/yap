@@ -1,0 +1,32 @@
+.container-sm
+  section.jumbotron.text-center.mt-3.mb-5
+    h3= I18n.t('users.index.title')
+
+  .mb-3.row
+    .d-grid.gap-2.d-md-flex.justify-content-md-end
+      = link_to I18n.t('users.new.title'), new_user_registration_path, class: 'btn btn-primary justify-content-end'
+  .col-md-3
+  .col-md-6
+  form
+    .card
+      .card-body
+        .mb-3.row
+          .col-md-12
+            table.table.table-striped.table-bordered
+              thead
+                tr
+                  th= I18n.t('users.common.id')
+                  th= I18n.t('users.common.email')
+                  th= I18n.t('users.common.role')
+                  th= I18n.t('users.common.team')
+                  th= I18n.t('users.common.actions')
+              tbody
+                - @users.each do |u|
+                  tr
+                    td= link_to u.id, user_path(u)
+                    td= u.email
+                    td= u.role
+                    td= u.team&.display_name
+                    td
+                      = link_to I18n.t('users.buttons.edit'), edit_user_path(u), class: 'btn btn-outline-primary btn-sm'
+  .col-md-3
