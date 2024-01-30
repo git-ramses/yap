@@ -3,3 +3,4 @@ en:
     title: "Welcome Home, %{user}"
     sign_in: Sign in
     sign_out: Sign out
+    sign_up: Sign up

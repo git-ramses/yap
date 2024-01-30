@@ -1,0 +1,29 @@
+.container.py-4
+  section.py-5.text-center.container
+    .row
+      .col-lg-6.col-md-8.mx-auto
+        h1.fw-light= User
+
+  .row.g-5
+    .col-md-3
+    .col-md-6
+      article.blog-post
+        table.table.table-striped.table-bordered
+          thead.thead-light
+          tbody
+            tr
+              th= I18n.t('users.common.email')
+              td= @user.email
+            tr
+              th= I18n.t('users.common.role')
+              / td= @user.formatted_role_names
+              td= @user.role_name
+            tr
+              th= I18n.t('users.common.team')
+              td= @user.team_name
+      ul.nav.justify-content-end
+        li.nav-item
+          = link_to 'Back', :back, class: 'btn btn-outline-primary me-2'
+        li.nav-item
+          = link_to 'Edit', edit_user_path(@user), class: 'btn btn-primary'
+    .col-md-3

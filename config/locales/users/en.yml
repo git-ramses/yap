@@ -1,0 +1,14 @@
+en:
+  users:
+    common:
+      id: ID
+      email: Email
+      role: Role
+      team: Team
+      actions: Actions
+    index:
+      title: Users
+    new:
+      title: New User
+    buttons:
+      edit: Edit
